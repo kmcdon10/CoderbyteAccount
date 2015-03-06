@@ -1,0 +1,36 @@
+import java.util.*; 
+import java.io.*;
+
+class Function {  
+  String AlphabetSoup(String str) { 
+  
+  char[] charList = new char[str.length()];
+    String sorted = "";
+    
+    for (int i = 0; i < str.length(); i++){
+      charList[i] = str.charAt(i);
+    }
+    
+    for (int j = 0; j < charList.length; j++){
+      for (int k = j+1; k < charList.length; k++){
+        if (charList[j] > charList[k]){
+          char temp = charList[j];
+          charList[j] = charList[k];
+          charList[k] = temp;
+        }
+      }
+    }
+    for (int l = 0; l < charList.length; l++){
+       sorted += charList[l];
+    }
+    return sorted;
+  } 
+  
+  public static void main (String[] args) {  
+    // keep this function call here     
+    Scanner  s = new Scanner(System.in);
+    Function c = new Function();
+    System.out.print(c.AlphabetSoup(s.nextLine())); 
+  }   
+  
+} 
