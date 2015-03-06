@@ -1,0 +1,31 @@
+import java.util.*; 
+import java.io.*;
+
+class Function {  
+  String LetterChanges(String str) { 
+  // LetterChanges takes a string and modifies it using the following algorithm. 
+  // Replace every letter in the string with the letter following it in the alphabet (ie. c becomes d, z becomes a).
+  // Then capitalize every vowel in this new string (a, e, i, o, u) and finally return this modified string. 
+  
+  String newStr = "";
+    
+  for(int i = 0; i < str.length(); i++){
+    char letter = str.charAt(i);
+    if (letter >= 'a' && letter <= 'z'){
+      letter++;
+    }
+    if (letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u'){
+      letter = Character.toUpperCase(letter);
+    }
+    newStr += letter;
+  }
+  return newStr;
+} 
+  
+  public static void main (String[] args) {  
+    Scanner  s = new Scanner(System.in);
+    Function c = new Function();
+    System.out.print(c.LetterChanges(s.nextLine())); 
+  }   
+  
+} 
