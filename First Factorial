@@ -1,0 +1,19 @@
+import java.util.*; 
+import java.io.*;
+
+class Function {  
+  int FirstFactorial(int num) { 
+	int result = 1;
+    for (int i = num; i >= 2; i--){
+    	result *= i; 
+    }
+    return result;
+  } 
+  
+  public static void main (String[] args) {  
+    Scanner  s = new Scanner(System.in);
+    Function c = new Function();
+    System.out.print(c.FirstFactorial(s.nextLine())); 
+  }   
+  
+}   
