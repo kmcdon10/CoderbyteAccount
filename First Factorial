@@ -2,18 +2,20 @@ import java.util.*;
 import java.io.*;
 
 class Function {  
-  int FirstFactorial(int num) { 
-	int result = 1;
-    for (int i = num; i >= 2; i--){
-    	result *= i; 
+  String FirstReverse(String str) {
+    // FirstReverse returns a copy of the string str in reverse
+    String reverse = "";
+    for (int i = str.length()-1; i >= 0; i--){
+       reverse += str.charAt(i);
     }
-    return result;
+    return reverse;
   } 
   
-  public static void main (String[] args) {  
+  public static void main (String[] args) {     
     Scanner  s = new Scanner(System.in);
     Function c = new Function();
-    System.out.print(c.FirstFactorial(s.nextLine())); 
+    System.out.print(c.FirstReverse(s.nextLine())); 
   }   
   
-}   
+}           
+
