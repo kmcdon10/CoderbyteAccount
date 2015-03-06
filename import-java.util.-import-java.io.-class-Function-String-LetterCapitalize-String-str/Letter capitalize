@@ -1,0 +1,26 @@
+import java.util.*; 
+import java.io.*;
+
+class Function {  
+  String LetterCapitalize(String str) { 
+  // LetterCapitalize takes a string str and returns a string with the first letter of each word capitalized
+  String[] wordList = str.split("\\s+");
+
+    String newStr = "";
+    for(int i = 0; i < wordList.length; i++){
+    	char firstLetter = Character.toUpperCase(wordList[i].charAt(0));
+      if (Character.isLetter(firstLetter)){  
+      	String tempWord = wordList[i].substring(1,wordList[i].length());
+        newStr += Character.toString(firstLetter) + tempWord + " ";
+      }
+    }
+    return newStr;
+  } 
+  
+  public static void main (String[] args) {    
+    Scanner  s = new Scanner(System.in);
+    Function c = new Function();
+    System.out.print(c.LetterCapitalize(s.nextLine())); 
+  }   
+  
+} 
