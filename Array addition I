@@ -1,0 +1,49 @@
+import java.util.*; 
+import java.io.*;
+
+class Function {  
+  String ArrayAdditionI(int[] arr) { 
+  
+  int[] listNum = new int[arr.length];
+  int index = 0; 
+  int sum = 0;
+  int largest = 0;
+    
+  for (int i = 0; i < arr.length; i++){
+    // this loop compares the integers in the array and stores the largest one as largest
+     largest = arr[0];
+     if (arr[i] > largest){
+     	largest = arr[i];
+        index = i;
+     } 
+  }
+    
+  for (int m = 0; m < arr.length; m++){
+    // this loop sets the largest int in the array to zero. Meant to neutralize it  
+  	if (arr[m] == largest){
+    	arr[m] = 0;
+    }
+  }
+    
+  // the following nested for loop tests whether any combination of numbers adds up to int largest 
+  for (int j = 0; j < arr.length; j++){
+  	sum = arr[j];
+  	for (int k = 0; k < arr.length; k++){
+    	if (sum + arr[k] == largest){
+        	return "true";
+        } else{
+        	sum += arr[k];
+        }
+    }
+  }  
+  return "" + (sum == largest);  
+  } 
+  
+  public static void main (String[] args) {  
+    // keep this function call here     
+    Scanner  s = new Scanner(System.in);
+    Function c = new Function();
+    System.out.print(c.ArrayAdditionI(s.nextLine())); 
+  }   
+  
+}  
