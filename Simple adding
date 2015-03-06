@@ -1,0 +1,20 @@
+import java.util.*; 
+import java.io.*;
+
+class Function {  
+  int SimpleAdding(int num) {
+    // SimpleAdding accepts an int num and returns the sum of all the between num to one
+  	int sum = num;
+    for (int i = num-1; i >= 1; i--){
+    	sum += i;
+    }   
+    return sum;
+  } 
+  
+  public static void main (String[] args) {    
+    Scanner  s = new Scanner(System.in);
+    Function c = new Function();
+    System.out.print(c.SimpleAdding(s.nextLine())); 
+  }   
+  
+}  
