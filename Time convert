@@ -1,0 +1,24 @@
+import java.util.*; 
+import java.io.*;
+
+class Function {  
+  String TimeConvert(int num) { 
+  	String time = "";
+    int hour = num / 60;
+    time += hour;
+    time += ":";
+
+    int min = num - (hour * 60);
+    time += min; 
+    
+    return time;
+  } 
+  
+  public static void main (String[] args) {  
+    // keep this function call here     
+    Scanner  s = new Scanner(System.in);
+    Function c = new Function();
+    System.out.print(c.TimeConvert(s.nextLine())); 
+  }   
+  
+} 
