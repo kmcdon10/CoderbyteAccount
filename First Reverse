@@ -1,11 +1,11 @@
+// Problem: Have the function FirstReverse(str) take the str parameter being passed and return the string in reversed order. 
+
 import java.util.*; 
 import java.io.*;
 
 class Function {  
-// Problem: Have the function FirstReverse(str) take the str parameter being passed and return the string in reversed order. 
-// FirstReverse accepts a string as input and returns the same string in reverse
-
   String FirstReverse(String str) { 
+  // FirstReverse accepts a string as input and returns a copy of the string in reverse
     String reverse = "";
     for (int i = str.length()-1; i >= 0; i--){
     	reverse += str.charAt(i);  
