@@ -1,9 +1,15 @@
+/* Problem: Have the function CheckNums(num1,num2) take both parameters being passed and 
+ * return the string true if num2 is greater than num1, otherwise return the string false.
+ * If the parameter values are equal to each other then return the string -1. 
+*/
+
 import java.util.*; 
 import java.io.*;
 
 class Function {  
   String CheckNums(int num1, int num2) { 
-  
+  // checkNums accepts two integers (num1,num2) and returns a string. Returns "true" when num2 > num1
+  // If num1 == num2, returns "-1". Otherwise, returns "false"
     if (num1 > num2){
       return "false";
     }
