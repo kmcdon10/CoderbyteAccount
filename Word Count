@@ -1,8 +1,14 @@
+/* Problem: Have the function WordCount(str) take the str string parameter being passed and return the number of words 
+ * the string contains (ie. "Never eat shredded wheat" would return 4). Words will be separated by single spaces. 
+*/
+
 import java.util.*; 
 import java.io.*;
 
 class Function {  
   int WordCount(String str) { 
+  // WordCount accepts a string str and returns an integer equal to the number of words str contains. 
+  // Each word in str must be separated by exactly one space
     int count = 1;
     
     for (int i = 0; i < str.length(); i++){
