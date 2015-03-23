@@ -1,8 +1,15 @@
+/* Problem: Have the function TimeConvert(num) take the num parameter being passed and return the number of hours and 
+ * minutes the parameter converts to (ie. if num = 63 then the output should be 1:3). 
+ * Separate the number of hours and minutes with a colon. 
+*/
+
 import java.util.*; 
 import java.io.*;
 
 class Function {  
   String TimeConvert(int num) { 
+  // TimeConvert accepts an integer and returns a string consisting of the number of hours and minutes the integer converts to
+  // For example: if num = 63, the output will be 1:3
   	String time = "";
     int hour = num / 60;
     time += hour;
