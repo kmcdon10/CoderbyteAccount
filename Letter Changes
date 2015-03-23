@@ -1,16 +1,16 @@
+// Problem: Have the function LetterChanges(str) take the str parameter being passed and modify it using the following algorithm  
+// Replace every letter in the string with the letter following it in the alphabet (ie. c becomes d, z becomes a). 
+// Then capitalize every vowel in this new string (a, e, i, o, u) and finally return this modified string. 
+
 import java.util.*; 
 import java.io.*;
 
 class Function {  
   String LetterChanges(String str) { 
-  /* Problem: Have the function LetterChanges(str) take the str parameter being passed and modify it using the following algorithm  
-   * Replace every letter in the string with the letter following it in the alphabet (ie. c becomes d, z becomes a). 
-  */ Then capitalize every vowel in this new string (a, e, i, o, u) and finally return this modified string. 
-
-  // LetterChanges accepts a string and modifies it using the following algorithm. 
-  // It replaces every letter in the string with the letter following it in the alphabet (ie. c becomes d, z becomes a).
-  // It then capitalizes every vowel in this new string (a, e, i, o, u) and returns this modified string. 
-  
+  /* LetterChanges accepts a string and modifies it using the following algorithm. 
+   * It replaces every letter in the string with the letter following it in the alphabet (ie. c becomes d, z becomes a).
+   * It then capitalizes every vowel in this new string (a, e, i, o, u) and returns this modified string. 
+  */ 
   String newStr = "";
     
   for(int i = 0; i < str.length(); i++){
