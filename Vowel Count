@@ -1,8 +1,14 @@
+/* Problem: Have the function VowelCount(str) take the str string parameter being passed and return the number of vowels 
+ * the string contains (ie. "All cows eat grass" would return 5). Do not count y as a vowel for this challenge. 
+*/
+
 import java.util.*; 
 import java.io.*;
 
 class Function {  
   int VowelCount(String str) { 
+  // VowelCount accepts a string str and returns a string consisting of the number of vowels in str.
+  // (i.e. if str = "happy", VowelCount returns "1")
     int count = 0;
     char[] vowels = {'a','e','i','o','u','A','E','I','O','U'};
     
