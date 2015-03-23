@@ -1,9 +1,14 @@
+/* Problem: Have the function AlphabetSoup(str) take the str string parameter being passed and return the string with 
+ * the letters in alphabetical order (ie. hello becomes ehllo). Assume numbers and punctuation symbols will not be included 
+ * in the string. 
+*/
+
 import java.util.*; 
 import java.io.*;
 
 class Function {  
   String AlphabetSoup(String str) { 
-  
+  // AlphabetSoup accepts a string and returns a copy of the string with the characters placed in alphabet order. 
   char[] charList = new char[str.length()];
     String sorted = "";
     
