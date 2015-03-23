@@ -1,0 +1,41 @@
+/* Problem: Have the function NumberSearch(str) take the str parameter, search for all the numbers in the string, 
+ * add them together, then return that final number. For example: if str is "88Hello 3World!" the output should be 91.
+ * You will have to differentiate between single digit numbers and multiple digit numbers like in the example above. 
+ * So "55Hello" and "5Hello 5" should return two different answers. Each string will contain at least one letter or symbol. 
+*/
+
+import java.util.*; 
+import java.io.*;
+
+class Function {  
+  String NumberAddition(String str) { 
+  /* NumberAddition accepts a string str of letters and integers and returns a string. 
+   * This method searches for integers in the string, differentiating between single digit numbers and multiple digit numbers 
+   * it then adds them together and returns the sum of int's in str. So "55Hello" returns "55" and "5Hello 5" returns "10"
+    String num = "";
+    int total = 0;
+  
+    for (int i = 0; i < str.length(); i++){
+    	char letter = str.charAt(i);
+      if (Character.isDigit(letter)){
+        num += letter;
+      }	else if (num != ""){
+        total += Integer.parseInt(num);
+        num = "";
+      } 
+    }     
+          if (num != ""){
+            total += Integer.parseInt(num);
+            num = "";
+          }      
+    return "" + total;    
+  } 
+  
+  public static void main (String[] args) {  
+    // keep this function call here     
+    Scanner  s = new Scanner(System.in);
+    Function c = new Function();
+    System.out.print(c.NumberAddition(s.nextLine())); 
+  }   
+  
+}  
