@@ -16,5 +16,4 @@ class Function {
     Function c = new Function();
     System.out.print(c.FirstReverse(s.nextLine())); 
   }   
-  
 }   
