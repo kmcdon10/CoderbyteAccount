@@ -11,7 +11,11 @@ import java.io.*;
 
 class Function {  
   String ArrayAdditionI(int[] arr) { 
-  //
+  /* ArrayAdditionI accepts an array of integers called arr and returns the string "true" or "false".
+   * Returns "true" when any combination of the numbers in the array can be summed to equal the largest number in the array
+   * Otherwise, returns "false". The array may contain both positive and negative integers, and will not be empty. 
+  */
+  
   int[] listNum = new int[arr.length];
   int index = 0; 
   int sum = 0;
