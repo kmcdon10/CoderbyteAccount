@@ -1,23 +1,45 @@
 // Problem: Have the function SimpleAdding(num) add up all the numbers from 1 to num.
 // For the test cases, the parameter num will be any number from 1 to 1000. 
 
-import java.util.*; 
-import java.io.*;
+package coderByte;
 
-class Function {  
-  int SimpleAdding(int num) {
-    // SimpleAdding accepts an int num and returns the sum of all integers between 1 and num
-  	int sum = num;
-    for (int i = num-1; i >= 1; i--){
-    	sum += i;
-    }   
-    return sum;
-  } 
-  
-  public static void main (String[] args) {    
-    Scanner  s = new Scanner(System.in);
-    Function c = new Function();
-    System.out.print(c.SimpleAdding(s.nextLine())); 
-  }   
-  
-}  
+import java.util.*; 
+
+public class SimpleAdd {
+
+   public int simpleAdding(String str) {
+      // SimpleAdding accepts an int and returns the sum of each whole number between the number and zero (inclusive)
+      try{
+         int sum = Integer.parseInt(str);
+         if (sum > 0){   
+            // sum is positive
+            int i = sum-1;
+            while(i > 0){
+               sum += i;
+               i--;
+            }   
+         }
+         else{
+            // sum is negative
+            int temp = sum+1;
+            while (temp < 0){
+               sum += temp;
+               temp++;
+            }
+         }
+         return sum;
+      }
+      catch (NumberFormatException e){
+         System.out.println("Please enter a number consisting of the digits 0-9");
+         return 0;
+      }
+
+   } 
+
+   public static void main (String[] args) {    
+      Scanner  s = new Scanner(System.in);
+      SimpleAdd c = new SimpleAdd();
+      System.out.print(c.simpleAdding(s.nextLine())); 
+   }   
+
+}   
