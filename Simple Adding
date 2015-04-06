@@ -30,7 +30,7 @@ public class SimpleAdd {
          return sum;
       }
       catch (NumberFormatException e){
-         System.out.println("Please enter a number consisting of the digits 0-9");
+         System.out.println("Error. Please try again");
          return 0;
       }
 
