@@ -1,22 +1,28 @@
-// Problem: Have the function FirstReverse(str) take the str parameter being passed and return the string in reversed order. 
+package coderByte;
 
 import java.util.*; 
 import java.io.*;
 
-class Function {  
-  String FirstReverse(String str) { 
-  // FirstReverse accepts a string as input and returns a copy of the string in reverse
-    String reverse = "";
-    for (int i = str.length()-1; i >= 0; i--){
-    	reverse += str.charAt(i);  
-    }
-    return reverse;
-  } 
-  
-  public static void main (String[] args) {  
-    Scanner  s = new Scanner(System.in);
-    Function c = new Function();
-    System.out.print(c.FirstReverse(s.nextLine())); 
-  }   
-  
+public class Function {
+   //Problem: Have the function FirstReverse(str) take the str parameter being passed and return the string in reversed order. 
+
+
+   public String FirstReverse(String str) { 
+      // this method accepts a string and returns a copy of the string in reverse. No changes are made to the capitalization
+      String reverse = "";
+      int strLen = str.length() -1;
+      while(strLen >= 0){
+         reverse += str.charAt(strLen);  
+         strLen--;
+      }
+      return reverse;
+   } 
+
+   public static void main (String[] args) {  
+      Scanner  s = new Scanner(System.in);
+      Function c = new Function();
+      System.out.print(c.FirstReverse(s.nextLine())); 
+   }   
+
 }   
+
